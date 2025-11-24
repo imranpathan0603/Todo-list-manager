@@ -66,6 +66,7 @@ li.addEventListener("dragover",function(e){
   enableComplete(li);
   enableDelete(li);
   enableEdit(li);
+  countTask()
 
   ul.append(li);
 }
@@ -229,4 +230,20 @@ function updateTaskOrder(){
   task = reorderedTask;
   localStorage.setItem("tasks", JSON.stringify(task));
   updateNumbers();
+}
+
+
+function countTask(){
+   let tasks = JSON.parse(localStorage.getItem("tasks"));
+
+   let count =0;
+   
+   task.forEach((e)=>{
+    if(e.completed === false){
+      count++;
+    }
+   
+   })
+  const takscount= document.getElementById('taskCount');
+  takscount.innerHTML=count;
 }

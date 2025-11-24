@@ -177,7 +177,20 @@ li.dragging {
 
   text-shadow: 0 0 10px #a68fe7, 0 0 20px #34cec4;}
 
- /* linear-gradient(135deg, #6e45e2, #88d3ce) */
+  
+#taskCount{
+ position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #03dac6;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 18px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
 /* ===== Animations ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
