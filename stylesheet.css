@@ -1,0 +1,197 @@
+     /* ===== Global Styling ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6e45e2, #88d3ce);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ===== Todo App Container ===== */
+.todo-container {
+  width: 380px;
+  min-height: 500px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 25px 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+h2 {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* ===== Input & Button Row ===== */
+#taskForm {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+#addInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#addInput:focus {
+  box-shadow: 0px 0px 8px #03dac6;
+}
+
+#submit {
+  /* background: #00c72b; */
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+
+  color: #000;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#submit:hover {
+  /* background: #02c7b6; */
+    background: linear-gradient(135deg, #a0f5ef, #6837ee);
+transition: .5s;
+  transform: translateY(-2px);
+}
+
+/* ===== Task List ===== */
+ul {
+  margin-top: 25px;
+  width: 100%;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #8f47f3 transparent;
+}
+
+/* Scrollbar Styling */
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #6200ea;
+  border-radius: 5px;
+}
+
+li {
+  background: white;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-left: 6px solid #6200ea;
+  border-radius: 6px;
+  font-size: 17px;
+  text-align: left;
+  font-weight: 500;
+  transition: 0.3s;
+  animation: slideIn 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+li:hover {
+  background: #6200ea;
+  color: white;
+  border-left-color: #03dac6;
+  transform: translateY(-2px);
+  
+}
+
+/* delete button */
+.delete-btn{
+float: right;
+border: none;
+background-color: #ff3b3b;
+color: white;
+padding: 5px 8px;
+border-radius: 4px;
+cursor: pointer;
+font-size: 14px;
+transition: 0.8s;
+}
+
+.delete-btn:hover{
+    background-color: #d60000;
+    transform: scale(1.1);
+}
+
+.edit-input {
+  width: 70%;
+  padding: 5px;
+  border: 2px solid #03dac6;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Completed Task Style */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  border-left-color: #4caf50 !important;
+  background: #d4ffd4;
+}
+
+/* drag and top */
+li.dragging {
+  /* opacity: 0.5; */
+  background-color: gray;
+    opacity: 0.7;
+  background-color: #444;
+  color: #fff;
+  border-left-color: #03dac6;
+  transform: scale(1.03);
+  cursor: grabbing;
+}
+
+#developer{
+  margin-top: 10px;
+  
+}
+
+#developer:hover{
+
+  text-shadow: 0 0 10px #a68fe7, 0 0 20px #34cec4;}
+
+ /* linear-gradient(135deg, #6e45e2, #88d3ce) */
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media(max-width:450px) {
+  .todo-container {
+    width: 90%;
+  }
+}
