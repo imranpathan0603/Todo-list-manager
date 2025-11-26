@@ -1,4 +1,17 @@
-// input  ->input
+document.addEventListener("DOMContentLoaded", function () {
+
+    // All your variables, event listeners, functions
+    // loadTasksFromStorage();
+    // createTaskElement();
+    // enableDelete();
+    // enableEdit();
+    // enableComplete();
+    // updateTaskOrder();
+    // updateTaskCount();
+    // etc...
+
+
+    // input  ->input
 // submit - click -> submit event - input word ko array me dala
 // array me store karna hai - word array me store hua
 // array ko display pe show karna hia - li me show kiye
@@ -247,3 +260,4 @@ function countTask(){
   const takscount= document.getElementById('taskCount');
   takscount.innerHTML=count;
 }
+}); // Do NOT forget closing

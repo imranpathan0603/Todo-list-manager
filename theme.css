@@ -25,7 +25,9 @@ body.dark {
  .slider{
   background-color:  #000000;
  }
-  
+  #submit{
+    background: linear-gradient(180deg, #4300fa, #110169);
+  }
 }
 
 /* Switch Button CSS */

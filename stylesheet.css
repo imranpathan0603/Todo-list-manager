@@ -58,9 +58,10 @@ h2 {
 
 #submit {
   /* background: #00c72b; */
-    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+  color: rgb(241, 227, 227);
+    background: linear-gradient(0deg, #4300fa, #a89de7);
 
-  color: #000;
+  /* color: #000; */
   font-size: 16px;
   margin-top: 10px;
   width: 100%;
